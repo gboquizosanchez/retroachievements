@@ -1,0 +1,64 @@
+{
+  "name": "gboquizosanchez/retroachievements",
+  "description": "RetroAchievements.org API Container for Laravel",
+  "license": "MIT",
+  "type": "library",
+  "keywords": [
+    "RetroAchievements",
+    "api-retroachievements"
+  ],
+  "homepage": "https://github.com/gboquizosanchez",
+  "authors": [
+    {
+      "name": "Germán Boquizo Sánchez",
+      "email": "germanboquizosanchez@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "RetroAchievements\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "RetroAchievements\\Tests\\": "tests/"
+    }
+  },
+  "require": {
+    "php": "^8.3",
+    "spatie/laravel-data": "^4.6"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.64",
+    "hermes/dependencies": "^1.1",
+    "larastan/larastan": "^2.9",
+    "orchestra/testbench": "^9.1",
+    "pestphp/pest": "^3.5"
+  },
+  "scripts": {
+    "fix": "./vendor/bin/php-cs-fixer fix",
+    "static": "./vendor/bin/phpstan analyse",
+    "all": [
+      "@fix",
+      "@static"
+    ]
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "RetroAchievements\\RetroAchievementsServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "sort-packages": true,
+    "preferred-install": "dist",
+    "optimize-autoloader": true,
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  }
+}
